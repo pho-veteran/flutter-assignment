@@ -4,7 +4,7 @@ import 'package:test_1/components/bmi/rounded_button.dart';
 import 'package:test_1/components/reuseable_card.dart';
 import 'package:test_1/models/bmi_calc_brain.dart';
 import 'package:test_1/screens/bmi_app/bmi_themed.dart';
-import 'package:test_1/screens/bmi_app/constants.dart';
+import 'package:test_1/screens/bmi_app/bmi_constants.dart';
 import 'package:test_1/screens/bmi_app/result_screen.dart';
 
 enum Gender { male, female }

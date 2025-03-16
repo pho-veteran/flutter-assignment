@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_1/screens/clima_app/loading_screen.dart';
 
 import 'screens/bmi_app/input_screen.dart';
 import 'screens/bmi_app/result_screen.dart';
@@ -33,6 +34,7 @@ void main() {
               resultText: '',
               interpretation: '',
             ),
+        '/climaApp': (context) => LoadingScreen(),
       },
     ),
   );

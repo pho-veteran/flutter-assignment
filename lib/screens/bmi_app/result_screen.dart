@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:test_1/components/reuseable_card.dart';
 
 import 'package:test_1/screens/bmi_app/bmi_themed.dart';
-import 'package:test_1/screens/bmi_app/constants.dart';
+import 'package:test_1/screens/bmi_app/bmi_constants.dart';
 
 class BmiResultScreen extends StatelessWidget {
   BmiResultScreen({

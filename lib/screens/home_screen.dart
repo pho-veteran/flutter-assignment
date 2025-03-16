@@ -36,7 +36,8 @@ class HomeScreen extends StatelessWidget {
             buildElevatedButton(context, text: "Xylophone App", route: '/xylophoneApp'),
             buildElevatedButton(context, text: "Quizzler App", route: '/quizzlerApp'),
             buildElevatedButton(context, text: "Destini Teller", route: '/destiniApp'),
-            buildElevatedButton(context, text: "BMI Calculator", route: '/bmiInput')
+            buildElevatedButton(context, text: "BMI Calculator", route: '/bmiInput'),
+            buildElevatedButton(context, text: "Clima App", route: '/climaApp'),
           ],
         ),
       ),
