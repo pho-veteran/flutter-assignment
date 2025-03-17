@@ -12,7 +12,9 @@ class _CityScreenState extends State<CityScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: const Text('Clima App')),
       body: Container(
+        padding: EdgeInsets.all(20.0),
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/images/city_background.jpg'),
@@ -26,7 +28,9 @@ class _CityScreenState extends State<CityScreen> {
               Align(
                 alignment: Alignment.topLeft,
                 child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
                   child: Icon(Icons.arrow_back_ios, size: 50.0),
                 ),
               ),

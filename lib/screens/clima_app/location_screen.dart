@@ -47,7 +47,17 @@ class _LocationScreenState extends State<LocationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('Clima App'),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pushReplacementNamed(context, '/');
+          },
+        ),
+      ),
       body: Container(
+        padding: EdgeInsets.all(20.0),
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/images/location_background.jpg'),
