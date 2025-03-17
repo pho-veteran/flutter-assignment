@@ -37,7 +37,7 @@ This project serves as a collection of Flutter application examples, demonstrati
 
 The project follows a feature-based structure with screens organized by functionality:
 
-```
+```plaintext
 lib/
   ├── components/        # Reusable UI components
   ├── screens/           # Application screens organized by feature
@@ -75,6 +75,7 @@ lib/
 ## Assets
 
 The project includes various assets:
+
 - **Images**: Located in the assets/images/ directory
 - **Audio**: Located in the assets/audio/ directory for the Xylophone app
 - **Fonts**: Custom fonts for typography enhancement
