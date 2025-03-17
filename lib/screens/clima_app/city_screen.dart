@@ -15,7 +15,7 @@ class _CityScreenState extends State<CityScreen> {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('images/city_background.jpg'),
+            image: AssetImage('assets/images/city_background.jpg'),
             fit: BoxFit.cover,
           ),
         ),
@@ -27,29 +27,21 @@ class _CityScreenState extends State<CityScreen> {
                 alignment: Alignment.topLeft,
                 child: TextButton(
                   onPressed: () {},
-                  child: Icon(
-                    Icons.arrow_back_ios,
-                    size: 50.0,
-                  ),
+                  child: Icon(Icons.arrow_back_ios, size: 50.0),
                 ),
               ),
               Container(
                 padding: EdgeInsets.all(20.0),
                 child: TextFormField(
                   decoration: kTextFieldInputDecoration,
-                  onChanged: (value) => {
-                    cityName = value,
-                  },
+                  onChanged: (value) => {cityName = value},
                 ),
               ),
               TextButton(
                 onPressed: () {
                   Navigator.pop(context, cityName);
                 },
-                child: Text(
-                  'Get Weather',
-                  style: kButtonTextStyle,
-                ),
+                child: Text('Get Weather', style: kButtonTextStyle),
               ),
             ],
           ),

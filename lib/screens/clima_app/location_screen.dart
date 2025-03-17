@@ -34,7 +34,7 @@ class _LocationScreenState extends State<LocationScreen> {
         return;
       }
 
-      temperature = weatherData['main']['temp'];
+      temperature = (weatherData['main']['temp']).toDouble();
       temperature = temperature.roundToDouble();
       var condition = weatherData['weather'][0]['id'];
       weatherIcon = weatherModel.getWeatherIcon(condition);
@@ -50,7 +50,8 @@ class _LocationScreenState extends State<LocationScreen> {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('images/location_background.jpg'),
+            image: AssetImage('assets/images/location_background.jpg'),
+            alignment: Alignment.center,
             fit: BoxFit.cover,
             colorFilter: ColorFilter.mode(
               Colors.white.withAlpha((0.8 * 255).toInt()),
@@ -86,8 +87,9 @@ class _LocationScreenState extends State<LocationScreen> {
                       );
 
                       if (typeNamed != null) {
-                        var weatherData =
-                            await weatherModel.getCityWeather(typeNamed);
+                        var weatherData = await weatherModel.getCityWeather(
+                          typeNamed,
+                        );
                         updateUI(weatherData);
                       }
                     },
@@ -99,8 +101,18 @@ class _LocationScreenState extends State<LocationScreen> {
                 padding: EdgeInsets.only(left: 15.0),
                 child: Row(
                   children: <Widget>[
-                    Text('$temperature°', style: kTempTextStyle),
-                    Text(weatherIcon, style: kConditionTextStyle),
+                    Flexible(
+                      child: FittedBox(
+                        fit: BoxFit.scaleDown,
+                        child: Text('$temperature°', style: kTempTextStyle),
+                      ),
+                    ),
+                    Flexible(
+                      child: FittedBox(
+                        fit: BoxFit.scaleDown,
+                        child: Text(weatherIcon, style: kConditionTextStyle),
+                      ),
+                    ),
                   ],
                 ),
               ),
